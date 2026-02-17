@@ -48,8 +48,8 @@ const Navbar = () => {
           {/* Desktop logo */}
           <div className="hidden lg:flex gap-2 items-center">
             <img className="w-10" src={logo} />
-            <h1 className="text-3xl font-semibold text-accent-content">
-              WarmPaw
+            <h1 className="text-3xl font-semibold text-accent-content italic">
+              WarmPaws
             </h1>
           </div>
         </div>
@@ -58,7 +58,9 @@ const Navbar = () => {
       {/*Mobile Logo*/}
       <div className="lg:hidden flex gap-2 items-center justify-center">
         <img className="w-8" src={logo}></img>
-        <h1 className="text-2xl font-semibold text-accent-content">WarmPaw</h1>
+        <h1 className="text-2xl font-semibold text-accent-content italic">
+          WarmPaws
+        </h1>
       </div>
 
       <div className="navbar-center hidden lg:flex">
@@ -81,7 +83,9 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-end">
-        <a className="btn btn-primary text-[22px]">Login</a>
+        <Link to="/auth/login" className="btn btn-primary text-[22px]">
+          Login
+        </Link>
       </div>
     </div>
   );
