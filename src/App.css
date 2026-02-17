@@ -1,42 +1,47 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap");
+
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  /* Snow background layers */
+  --color-base-100: oklch(98% 0.01 240); /* page background */
+  --color-base-200: oklch(95% 0.02 240); /* sections */
+  --color-base-300: oklch(92% 0.03 240); /* cards/navbar */
+  --color-base-content: oklch(0.4498 0.0729 241.29); /* text */
+
+  /* Sky blue — main actions */
+  --color-primary: oklch(65% 0.2 235);
+  --color-primary-content: oklch(99% 0.01 240);
+
+  /* Frost blue — secondary actions */
+  --color-secondary: oklch(78% 0.16 200);
+  --color-secondary-content: oklch(20% 0.03 240);
+
+  /* Soft winter highlight */
+  --color-accent: oklch(72% 0.14 180);
+  --color-accent-content: oklch(18% 0.03 240);
+
+  /* Dark cold footer */
+  --color-neutral: oklch(32% 0.04 240);
+  --color-neutral-content: oklch(96% 0.01 240);
+
+  /* Soft feedback colors */
+  --color-info: oklch(70% 0.18 230);
+  --color-success: oklch(72% 0.18 155);
+  --color-warning: oklch(82% 0.18 85);
+  --color-error: oklch(65% 0.22 25);
+
+  /* Rounded cozy feeling */
+  --radius-box: 1.25rem;
+  --radius-btn: 0.9rem;
+  --radius-field: 0.7rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+* {
+  font-family: "SN Pro", sans-serif;
 }
