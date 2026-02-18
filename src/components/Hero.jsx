@@ -50,7 +50,7 @@ const Hero2 = () => {
               <h1 className="text-start text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
                 Keep Your Furry Friends Warm <br /> This Winter
               </h1>
-              <Link className="btn btn-primary text-2xl">
+              <Link to="/services" className="btn btn-primary text-2xl">
                 Explore Services <IoArrowForwardOutline />
               </Link>
             </div>

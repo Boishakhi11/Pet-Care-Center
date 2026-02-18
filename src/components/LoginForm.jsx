@@ -1,5 +1,6 @@
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
+import { LuDot } from "react-icons/lu";
 import { Link } from "react-router";
 
 const LoginForm = () => {
@@ -32,6 +33,16 @@ const LoginForm = () => {
               SignUp{" "}
             </Link>
           </p>
+        </div>
+
+        <div className="flex items-center justify-center gap-2">
+          <a className="cursor-pointer hover:text-primary hover:underline">
+            Privacy Policy
+          </a>
+          <LuDot />
+          <a className="cursor-pointer hover:text-primary hover:underline">
+            Terms of Services
+          </a>
         </div>
       </fieldset>
     </div>
