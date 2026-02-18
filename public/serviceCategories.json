@@ -1,0 +1,110 @@
+[
+  {
+    "serviceId": 1,
+    "serviceName": "Winter Coat Fitting for Dogs",
+    "providerName": "PawCare Studio",
+    "providerEmail": "info@pawcare.com",
+    "price": 25,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Winter Coat Fitting\nReliable and caring pet service: grooming, walking, and boarding—ensuring your furry friends' happiness and well-being.\n\nOverview\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.\nEllentesque sit amet odio nisi. Phasellus quis lorem leo. Sed dignissim augue sit amet diam laoreet venenatis.\n\nThe Process\nPets are measured, fitted with insulated coats, and adjusted for comfort and mobility. Materials are breathable and waterproof.\n\nThe End\nSed in justo ac leo sodales suscipit. Etiam rhoncus porta massa a volutpat.",
+    "image": "https://i.postimg.cc/wintercoat1.png",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 2,
+    "serviceName": "Paw Balm & Protection Treatment",
+    "providerName": "SnowPaws Clinic",
+    "providerEmail": "hello@snowpaws.com",
+    "price": 18,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "Paw Protection\nReliable and caring pet service: grooming, walking, and boarding—ensuring your furry friends' happiness and well-being.\n\nOverview\nCold pavements and ice salts damage paws during winter. Treatment restores moisture and prevents cracking.\n\nThe Process\nCleaning, trimming fur between pads, applying medicated balm and protective coating.\n\nThe End\nCurabitur euismod pellentesque dapibus. Maecenas a pretium odio.",
+    "image": "https://i.postimg.cc/pawbals2.png",
+    "category": "Health"
+  },
+  {
+    "serviceId": 3,
+    "serviceName": "Heated Indoor Pet Boarding",
+    "providerName": "WarmNest Boarding",
+    "providerEmail": "stay@warmnest.com",
+    "price": 55,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Heated Boarding\nReliable and caring pet service: grooming, walking, and boarding—ensuring your furry friends' happiness and well-being.\n\nOverview\nComfortable heated indoor accommodation for pets during extreme cold days.\n\nThe Process\nTemperature monitored rooms, scheduled feeding, playtime and rest routines.\n\nThe End\nDonec consequat condimentum ligula, id dapibus lorem tincidunt non.",
+    "image": "https://i.postimg.cc/heatedboarding3.png",
+    "category": "Boarding"
+  },
+  {
+    "serviceId": 4,
+    "serviceName": "Winter Grooming & De-Shedding",
+    "providerName": "FluffyCare Salon",
+    "providerEmail": "care@fluffycare.com",
+    "price": 40,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Winter Grooming\nReliable and caring pet service: grooming, walking, and boarding—ensuring your furry friends' happiness and well-being.\n\nOverview\nRemoves dead undercoat while maintaining protective winter fur layers.\n\nThe Process\nWarm bath, conditioning, brushing, drying and trimming sensitive areas.\n\nThe End\nUt labore et dolore magnam aliquam quaerat voluptatem.",
+    "image": "https://i.postimg.cc/grooming4.png",
+    "category": "Grooming"
+  },
+  {
+    "serviceId": 5,
+    "serviceName": "Cold Weather Vet Checkup",
+    "providerName": "NordVet Clinic",
+    "providerEmail": "vet@nordvet.com",
+    "price": 65,
+    "rating": 4.9,
+    "slotsAvailable": 2,
+    "description": "Winter Health Check\nReliable and caring pet service: grooming, walking, and boarding—ensuring your furry friends' happiness and well-being.\n\nOverview\nSeasonal health exam focusing on joints, skin dryness and respiratory health.\n\nThe Process\nFull examination, nutrition advice and winter supplements guidance.\n\nThe End\nVestibulum ultrices sollicitudin eleifend.",
+    "image": "https://i.postimg.cc/vetcheck5.png",
+    "category": "Medical"
+  },
+  {
+    "serviceId": 6,
+    "serviceName": "Snow Walk Exercise Session",
+    "providerName": "HappyTail Walkers",
+    "providerEmail": "walk@happytail.com",
+    "price": 22,
+    "rating": 4.5,
+    "slotsAvailable": 7,
+    "description": "Snow Walking\nReliable and caring pet service: grooming, walking, and boarding—ensuring your furry friends' happiness and well-being.\n\nOverview\nSupervised winter walks to maintain activity safely in cold temperatures.\n\nThe Process\nShort controlled walks, paw checks and warm-up breaks.\n\nThe End\nMorbi porta congue tempus.",
+    "image": "https://i.postimg.cc/snowwalk6.png",
+    "category": "Exercise"
+  },
+  {
+    "serviceId": 7,
+    "serviceName": "Pet Sweater Knitting Service",
+    "providerName": "CozyPets Boutique",
+    "providerEmail": "cozy@pets.com",
+    "price": 35,
+    "rating": 4.8,
+    "slotsAvailable": 4,
+    "description": "Custom Sweaters\nReliable and caring pet service: grooming, walking, and boarding—ensuring your furry friends' happiness and well-being.\n\nOverview\nHand-knitted sweaters tailored to pet size and fur sensitivity.\n\nThe Process\nMeasurements taken and wool selection customized.\n\nThe End\nAliquam bibendum erat eu nisi faucibus dignissim.",
+    "image": "https://i.postimg.cc/sweater7.png",
+    "category": "Clothing"
+  },
+  {
+    "serviceId": 8,
+    "serviceName": "Anti-Freeze Safety Cleaning",
+    "providerName": "SafeHome Pets",
+    "providerEmail": "safe@homepets.com",
+    "price": 28,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Safety Cleaning\nReliable and caring pet service: grooming, walking, and boarding—ensuring your furry friends' happiness and well-being.\n\nOverview\nRemoves toxic residues from fur after outdoor winter exposure.\n\nThe Process\nWarm rinse bath and chemical-safe cleansing shampoo.\n\nThe End\nNam vulputate, risus a efficitur cursus.",
+    "image": "https://i.postimg.cc/clean8.png",
+    "category": "Hygiene"
+  },
+  {
+    "serviceId": 9,
+    "serviceName": "Senior Pet Joint Therapy",
+    "providerName": "GentleCare Therapy",
+    "providerEmail": "therapy@gentlecare.com",
+    "price": 70,
+    "rating": 4.9,
+    "slotsAvailable": 3,
+    "description": "Joint Therapy\nReliable and caring pet service: grooming, walking, and boarding—ensuring your furry friends' happiness and well-being.\n\nOverview\nWarm massage therapy designed for arthritis relief during winter months.\n\nThe Process\nHeat pads, stretching exercises and muscle relaxation treatment.\n\nThe End\nSed dignissim augue sit amet diam laoreet venenatis.",
+    "image": "https://i.postimg.cc/therapy9.png",
+    "category": "Therapy"
+  }
+]
