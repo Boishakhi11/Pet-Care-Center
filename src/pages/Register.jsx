@@ -1,7 +1,7 @@
 import React from "react";
 import { RiAccountCircleFill } from "react-icons/ri";
 import img from "../assets/Register.jpg";
-import SignUp from "../components/SignUp";
+import SignUpForm from "../components/SignUpForm";
 
 const Register = () => {
   return (
@@ -15,9 +15,9 @@ const Register = () => {
         </div>
         <div className="lg:col-span-2 col-span-3 flex flex-col items-center pt-6">
           <RiAccountCircleFill className="text-2xl cursor-pointer" />
-          <h1 className="font-bold text-2xl">Sign in to your account</h1>
-          <p className="">Enter your detials to access the dashboard</p>
-          <SignUp></SignUp>
+          <h1 className="font-bold text-2xl">Create account</h1>
+          <p className="">Get started with WarmPaws</p>
+          <SignUpForm></SignUpForm>
         </div>
       </div>
     </div>
