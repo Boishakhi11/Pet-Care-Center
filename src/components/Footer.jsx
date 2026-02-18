@@ -8,11 +8,8 @@ const Footer = () => {
       <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content py-10 flex justify-around items-center">
         <aside>
           <img className="w-7" src={logo}></img>
-          <p>
-            WarmPaws
-            <br />
-            Pet Care in Winter
-          </p>
+          <h1 className="text-xl">WarmPaws</h1>
+          <p>Pet Care in Winter</p>
         </aside>
         <nav>
           <h6 className="footer-title">Social</h6>
