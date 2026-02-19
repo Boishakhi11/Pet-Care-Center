@@ -5,11 +5,15 @@ import AuthLayout from "../layouts/AuthLayout";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import MyProfile from "../pages/MyProfile";
+import Error from "../components/Error";
+import Loading from "../components/Loading";
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: HomeLayout,
+    loader: () => fetch("/vets.json"),
+    hydrateFallbackElement: <Loading></Loading>,
   },
   {
     path: "/auth",
@@ -35,7 +39,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/*",
-    element: <h1>Error Page</h1>,
+    Component: Error,
   },
 ]);
 

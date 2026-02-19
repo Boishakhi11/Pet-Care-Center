@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Edith Mitchell",
+    "title": "Veterinary Surgeon",
+    "description": "With over 10 years of experience in small animal surgery, Dr. Sarah ensures every pet receives the best medical care possible.",
+    "image": "https://i.postimg.cc/6QsCdPvQ/4966802fb9b81a99b5d12b2e99647d65.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Dr. James Carter",
+    "title": "Animal Care Specialist",
+    "description": "Dr. James specializes in preventive care and nutrition, helping pets live healthier and happier lives through personalized wellness plans.",
+    "image": "https://i.postimg.cc/Kz8zhv2F/medium_shot_doctor_holding_face_mask.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Dr. Emily Rodriguez",
+    "title": "Emergency Veterinarian",
+    "description": "Experienced in emergency and critical care, Dr. Emily provides rapid diagnosis and treatment to ensure pets receive immediate support when they need it most.",
+    "image": "https://i.postimg.cc/8zGfnGjv/medium_shot_smiley_woman_with_stethoscope.jpg"
+  }
+]
