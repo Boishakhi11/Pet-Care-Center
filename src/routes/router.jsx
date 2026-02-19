@@ -32,7 +32,10 @@ const router = createBrowserRouter([
   {
     path: "/services",
     Component: Services,
+    loader: () => fetch("/serviceCategories.json"),
+    hydrateFallbackElement: <Loading></Loading>,
   },
+
   {
     path: "/profile",
     Component: MyProfile,
