@@ -4,6 +4,8 @@ import Footer from "../components/Footer";
 import Experts from "../components/Experts";
 import { useLoaderData } from "react-router";
 import Testimonials from "../components/Testimonials";
+import ServiceDemo from "../components/ServiceDemo";
+import WinterTips from "../components/WinterTips";
 
 const HomeLayout = () => {
   const data = useLoaderData();
@@ -16,13 +18,19 @@ const HomeLayout = () => {
       </header>
       <main className="w-11/12 mx-auto">
         <section>
+          <ServiceDemo
+            key={data.services.serviceId}
+            data={data.services}
+          ></ServiceDemo>
+        </section>
+        <section>
           <Experts key={data.vets.id} data={data.vets}></Experts>
         </section>
         <section>
-          <Testimonials
-            key={data.reviews.id}
-            data={data.reviews}
-          ></Testimonials>
+          <WinterTips></WinterTips>
+        </section>
+        <section>
+          <Testimonials data={data.reviews}></Testimonials>
         </section>
       </main>
       <footer>
