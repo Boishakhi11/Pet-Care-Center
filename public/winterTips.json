@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Protect Your Pet’s Paws",
+    "description": "Snow, ice, and road salt can irritate your pet’s paws. Use pet-safe paw balm or booties and wipe paws after outdoor walks.",
+    "icon": "paw"
+  },
+  {
+    "id": 2,
+    "title": "Provide Warm Bedding",
+    "description": "Ensure your pet has a warm, insulated sleeping area away from cold floors and drafts. Blankets and pet beds help maintain body heat.",
+    "icon": "bed"
+  },
+  {
+    "id": 3,
+    "title": "Maintain Grooming Routine",
+    "description": "Regular grooming keeps your pet’s coat healthy and helps prevent matting that can reduce insulation during winter.",
+    "icon": "brush"
+  },
+  {
+    "id": 4,
+    "title": "Keep Pets Hydrated",
+    "description": "Pets still need plenty of water in winter. Indoor heating can cause dehydration, so always provide fresh water.",
+    "icon": "water"
+  },
+  {
+    "id": 5,
+    "title": "Dress for the Weather",
+    "description": "Short-haired or small pets may benefit from sweaters or coats when outdoors to stay warm and comfortable.",
+    "icon": "coat"
+  },
+  {
+    "id": 6,
+    "title": "Limit Outdoor Exposure",
+    "description": "Avoid long outdoor sessions during extreme cold. Watch for signs of shivering or discomfort and bring pets inside promptly.",
+    "icon": "snow"
+  }
+]

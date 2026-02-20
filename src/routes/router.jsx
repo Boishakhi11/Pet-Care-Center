@@ -12,7 +12,14 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: HomeLayout,
-    loader: () => fetch("/vets.json"),
+    loader: async () => {
+      const vetsRes = await fetch("/vets.json");
+      const vets = await vetsRes.json();
+      const reviewsRes = await fetch("/reviews.json");
+      const reviews = await reviewsRes.json();
+      return { vets, reviews };
+    },
+
     hydrateFallbackElement: <Loading></Loading>,
   },
   {

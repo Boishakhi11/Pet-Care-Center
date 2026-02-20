@@ -2,13 +2,13 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Experts from "../components/Experts";
-import { useLoaderData, useParams } from "react-router";
+import { useLoaderData } from "react-router";
+import Testimonials from "../components/Testimonials";
 
 const HomeLayout = () => {
-  const { id } = useParams();
   const data = useLoaderData();
 
-  console.log(data, id);
+  console.log(data);
   return (
     <div className="bg-base-200">
       <header className="bg-base-300">
@@ -16,7 +16,13 @@ const HomeLayout = () => {
       </header>
       <main className="w-11/12 mx-auto">
         <section>
-          <Experts key={data.id} data={data}></Experts>
+          <Experts key={data.vets.id} data={data.vets}></Experts>
+        </section>
+        <section>
+          <Testimonials
+            key={data.reviews.id}
+            data={data.reviews}
+          ></Testimonials>
         </section>
       </main>
       <footer>

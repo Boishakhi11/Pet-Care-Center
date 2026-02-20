@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Marita Hawson",
+    "rating": 5,
+    "date": "2025-11-12",
+    "comment": "Amazing service! My pet was treated with so much care and love. Highly recommended.",
+    "image": "https://randomuser.me/api/portraits/women/65.jpg"
+  },
+  {
+    "id": 2,
+    "name": "John Miller",
+    "rating": 4,
+    "date": "2025-11-18",
+    "comment": "Great experience overall. Friendly staff and quick response time.",
+    "image": "https://randomuser.me/api/portraits/men/32.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Anne Lise",
+    "rating": 5,
+    "date": "2025-12-02",
+    "comment": "Best pet care service I’ve used. My dog absolutely loves them!",
+    "image": "https://randomuser.me/api/portraits/women/22.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Daniel Lee",
+    "rating": 3,
+    "date": "2025-12-10",
+    "comment": "Service was good but scheduling could be improved.",
+    "image": "https://randomuser.me/api/portraits/men/45.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Emily Brown",
+    "rating": 5,
+    "date": "2026-01-05",
+    "comment": "Fantastic experience! Professional, caring, and very reliable.",
+    "image": "https://randomuser.me/api/portraits/women/38.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Lukas Eriksen",
+    "rating": 5,
+    "date": "2026-01-15",
+    "comment": "WarmPaws made winter pet care stress-free. The service providers were professional and caring.",
+    "image": "https://randomuser.me/api/portraits/men/33.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Maja Johansen",
+    "rating": 4,
+    "date": "2026-01-20",
+    "comment": "Great platform with cozy winter products. The booking process was smooth and quick.",
+    "image": "https://randomuser.me/api/portraits/women/12.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Oliver Hansen",
+    "rating": 5,
+    "date": "2026-02-01",
+    "comment": "Booking winter grooming was so easy. My dog looked amazing and stayed warm all season.",
+    "image": "https://randomuser.me/api/portraits/men/52.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Edith Nilsen",
+    "rating": 5,
+    "date": "2026-02-08",
+    "comment": "I loved the expert tips section. It really helped me prepare my puppy for snowy walks.",
+    "image": "https://randomuser.me/api/portraits/women/68.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Jonas Berg",
+    "rating": 4,
+    "date": "2026-02-12",
+    "comment": "The grooming service kept my cat comfortable during winter. Highly recommend their paw treatment.",
+    "image": "https://randomuser.me/api/portraits/men/45.jpg"
+  }
+]
