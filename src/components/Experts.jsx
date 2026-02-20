@@ -6,7 +6,7 @@ const Experts = ({ data }) => {
       <h1 className="text-4xl md:text-5xl font-semibold text-center">
         Meet Our <span className="text-primary"> Expert</span> Vets
       </h1>
-      <p className="text-center">
+      <p className="text-center mb-20">
         Caring hands and experienced hearts behind your pet's health
       </p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-8">

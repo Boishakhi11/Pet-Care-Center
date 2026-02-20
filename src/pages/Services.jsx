@@ -6,7 +6,6 @@ import ServiceCard from "../components/ServiceCard";
 
 const Services = () => {
   const servicedata = useLoaderData();
-  const { id } = useParams();
 
   return (
     <div className="bg-base-100 min-h-screen flex flex-col">

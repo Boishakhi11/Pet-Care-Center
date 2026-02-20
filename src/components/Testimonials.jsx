@@ -6,8 +6,9 @@ const Testimonials = ({ data }) => {
     <section className="py-12 mt-20">
       {/* title */}
       <h1 className="text-4xl md:text-5xl font-semibold text-center mb-8">
-        Reviews From Our <span className="text-primary">Customers</span>
+        Happy <span className="text-primary">Customers</span>
       </h1>
+      <p className="text-center">See what our clients say</p>
 
       <Marquee speed={20} pauseOnHover>
         {/* flex row container */}

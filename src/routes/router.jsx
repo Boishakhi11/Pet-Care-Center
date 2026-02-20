@@ -19,7 +19,9 @@ const router = createBrowserRouter([
       const reviews = await reviewsRes.json();
       const serviceRes = await fetch("/serviceCategories.json");
       const services = await serviceRes.json();
-      return { vets, reviews, services };
+      const tipsRes = await fetch("/winterTips.json");
+      const tips = await tipsRes.json();
+      return { vets, reviews, services, tips };
     },
 
     hydrateFallbackElement: <Loading></Loading>,

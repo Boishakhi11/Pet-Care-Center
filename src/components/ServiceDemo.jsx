@@ -3,10 +3,11 @@ import { Link } from "react-router";
 
 const ServiceDemo = ({ data }) => {
   return (
-    <div className="mt-20">
-      <h1 className="text-4xl md:text-5xl font-semibold text-center mb-8">
+    <div className="mt-20 space-y-3">
+      <h1 className="text-4xl md:text-5xl font-semibold text-center">
         Popular Winter Care <span className="text-primary">Services</span>
       </h1>
+      <p className="text-center">What we can do for you</p>
       <div className="grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 p-10">
         {data.map((service) => (
           <div className="bg-base-100 border border-base-300 flex flex-col items-center gap-3 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-0.5 p-4">
@@ -33,7 +34,7 @@ const ServiceDemo = ({ data }) => {
                   {service.price} Nok
                 </span>
               </div>
-              <Link className="btn btn-sm btn-primary w-full rounded-full">
+              <Link className="btn btn-sm btn-primary text-[19px] w-full rounded-full">
                 View Details
               </Link>
             </div>
