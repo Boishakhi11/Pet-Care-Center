@@ -47,8 +47,8 @@ const Hero2 = () => {
               wind={[-0.5, 0.5]}
             />
             <div className="absolute inset-0 flex flex-col items-start justify-center bg-black/20 text-white p-4 text-center space-y-4 pl-10">
-              <h1 className="text-start text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                Keep Your Furry Friends Warm <br /> This Winter
+              <h1 className="text-start text-4xl md:text-5xl font-bold mb-4">
+                Keep Your Furry Friends <br /> Warm This Winter
               </h1>
               <Link to="/services" className="btn btn-primary text-2xl">
                 Explore Services <IoArrowForwardOutline />

@@ -1,12 +1,14 @@
 import { createBrowserRouter } from "react-router";
 import HomeLayout from "../layouts/HomeLayout";
-import Services from "../pages/Services";
+import Services from "../layouts/ServicesLayout";
 import AuthLayout from "../layouts/AuthLayout";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
 import MyProfile from "../pages/MyProfile";
 import Error from "../components/Error";
 import Loading from "../components/Loading";
+import { Component } from "react";
+import Categories from "../components/Search";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,12 @@ const router = createBrowserRouter([
     Component: Services,
     loader: () => fetch("/serviceCategories.json"),
     hydrateFallbackElement: <Loading></Loading>,
+    children: [
+      {
+        path: "category/:id",
+        Component: Categories,
+      },
+    ],
   },
 
   {

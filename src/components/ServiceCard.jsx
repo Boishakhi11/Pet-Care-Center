@@ -1,7 +1,6 @@
 import React from "react";
 
 const ServiceCard = ({ servicedata }) => {
-  console.log(servicedata);
   return (
     <div className=" bg-base-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 w-11/12 mx-auto">
       {servicedata.map((service) => (

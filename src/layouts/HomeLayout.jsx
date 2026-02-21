@@ -10,7 +10,7 @@ import WinterTips from "../components/WinterTips";
 const HomeLayout = () => {
   const data = useLoaderData();
 
-  console.log(data);
+  //console.log(data);
   return (
     <div className="bg-base-200">
       <header className="bg-base-300">

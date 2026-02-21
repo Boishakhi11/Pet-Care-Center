@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "name": "All"
+  },
+  {
+    "id": 1,
+    "name": "Grooming"
+  },
+  {
+    "id": 2,
+    "name": "Clothing"
+  },
+  {
+    "id": 3,
+    "name": "Training"
+  },
+  {
+    "id": 4,
+    "name": "Walking"
+  }
+]
