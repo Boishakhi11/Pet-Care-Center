@@ -1,9 +1,17 @@
 import React from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { GrFormRefresh } from "react-icons/gr";
 
 const BookAppointmnet = () => {
-  const handleBooking = () => {
+  const today = new Date().toISOString().split("T")[0];
+  console.log(today);
+  const handleBooking = (e) => {
+    e.preventDefault();
+
+    const form = e.target;
+
     toast("Appointment Booked Succesfully");
+    form.reset();
   };
   return (
     <div>
@@ -14,25 +22,32 @@ const BookAppointmnet = () => {
 
       {/*form*/}
       <div className="flex items-center justify-center bg-base-100 mt-10">
-        <fieldset className="fieldset bg-base-200 border-base-300 shadow-2xl rounded-box w-xs border p-6 space-y-1">
+        <form
+          onSubmit={handleBooking}
+          className="fieldset bg-base-200 border-base-300 shadow-2xl rounded-box w-xs border p-6 space-y-1"
+        >
           <label className="label">Name</label>
-          <input required type="text" className="input" placeholder="Name" />
+          <input
+            required
+            name="name"
+            type="text"
+            className="input"
+            placeholder="Name"
+          />
 
           <label className="label">Phone Number</label>
           <input
             required
+            name="phone"
             type="tel"
             className="input"
             placeholder="Phone Number"
-            pattern="[0-9]*"
-            minLength="10"
-            maxLength="10"
-            title="Must be 10 digits"
           />
 
           <label className="label">Pet Name</label>
           <input
             required
+            name="petName"
             type="text"
             className="input"
             placeholder="Pet Name"
@@ -40,7 +55,7 @@ const BookAppointmnet = () => {
 
           <label className="label">Choose Service</label>
           <label className="select">
-            <select>
+            <select name="service">
               <option>Grooming</option>
               <option>Clothing</option>
               <option>Training</option>
@@ -49,13 +64,19 @@ const BookAppointmnet = () => {
           </label>
 
           <label className="label">Select Date</label>
-          <input required type="date" className="input" />
+          <input
+            required
+            name="date"
+            min={today}
+            type="date"
+            className="input"
+          />
 
-          <button onClick={handleBooking} className="btn btn-primary mt-2">
+          <button type="submit" className="btn btn-primary mt-2">
             Book Now
           </button>
-        </fieldset>
-        <Toaster />
+        </form>
+        <Toaster position="top-right" />
       </div>
     </div>
   );
