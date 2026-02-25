@@ -18,7 +18,10 @@ const HomeLayout = () => {
       </header>
       <main className="w-11/12 mx-auto">
         <section>
-          <ServiceDemo data={data.services}></ServiceDemo>
+          <ServiceDemo
+            key={data.services.serviceId}
+            data={data.services}
+          ></ServiceDemo>
         </section>
         <section>
           <Experts data={data.vets}></Experts>

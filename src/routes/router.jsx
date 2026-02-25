@@ -7,8 +7,7 @@ import Register from "../pages/Register";
 import MyProfile from "../pages/MyProfile";
 import Error from "../components/Error";
 import Loading from "../components/Loading";
-import { Component } from "react";
-import Categories from "../components/Search";
+import ServiceDetails from "../components/ServiceDetails";
 
 const router = createBrowserRouter([
   {
@@ -43,14 +42,15 @@ const router = createBrowserRouter([
     ],
   },
   {
+    id: "services",
     path: "/services",
     Component: Services,
     loader: () => fetch("/serviceCategories.json"),
     hydrateFallbackElement: <Loading></Loading>,
     children: [
       {
-        path: "category/:id",
-        Component: Categories,
+        path: ":id",
+        Component: ServiceDetails,
       },
     ],
   },

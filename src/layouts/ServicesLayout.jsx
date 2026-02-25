@@ -1,13 +1,14 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Outlet, useLoaderData } from "react-router";
+import { Outlet, useLoaderData, useParams } from "react-router";
 import ServiceCard from "../components/ServiceCard";
 import Search from "../components/Search";
 import BookAppointmnet from "../components/BookAppointmnet";
 
 const ServicesLayout = () => {
   const servicedata = useLoaderData();
+  const { id } = useParams();
 
   return (
     <div className="bg-base-100 min-h-screen flex flex-col">
@@ -15,20 +16,26 @@ const ServicesLayout = () => {
         <Navbar></Navbar>
       </header>
       <main className="grow w-11/12 mx-auto bg-base-200">
+        <section>{!id && <Search></Search>}</section>
+
         <section>
-          <Search></Search>
+          {!id && (
+            <ServiceCard
+              key={servicedata.id}
+              servicedata={servicedata}
+            ></ServiceCard>
+          )}
         </section>
 
         <section>
-          <ServiceCard
-            key={servicedata.id}
-            servicedata={servicedata}
-          ></ServiceCard>
+          <Outlet></Outlet>
         </section>
+
         <section>
           <BookAppointmnet></BookAppointmnet>
         </section>
       </main>
+
       <footer>
         <Footer></Footer>
       </footer>

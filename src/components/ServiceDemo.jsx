@@ -34,7 +34,10 @@ const ServiceDemo = ({ data }) => {
                   {service.price} Nok
                 </span>
               </div>
-              <Link className="btn btn-sm btn-primary text-[19px] w-full rounded-full">
+              <Link
+                to={`/services/${service.serviceId}`}
+                className="btn btn-sm btn-primary text-[19px] w-full rounded-full"
+              >
                 View Details
               </Link>
             </div>

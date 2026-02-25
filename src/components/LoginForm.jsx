@@ -1,23 +1,59 @@
-import React from "react";
+import React, { use } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { LuDot } from "react-icons/lu";
 import { Link } from "react-router";
+import { AuthContext } from "../provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const LoginForm = () => {
+  const { loginUser } = use(AuthContext);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    loginUser(email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        toast("Login Succesfully");
+        form.reset();
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+        toast("Something went wrong:", errorMessage);
+      });
+  };
   return (
     <div className="flex items-center justify-center bg-base-100 mt-10">
-      <fieldset className="fieldset bg-base-200 border-base-300 shadow-2xl rounded-box w-xs border p-6 space-y-1">
+      <form
+        onSubmit={handleLogin}
+        className="fieldset bg-base-200 border-base-300 shadow-2xl rounded-box w-xs border p-6 space-y-1"
+      >
         <label className="label">Email</label>
-        <input type="email" className="input" placeholder="Email" />
+        <input
+          name="email"
+          type="email"
+          className="input"
+          placeholder="Email"
+        />
 
         <label className="label">Password</label>
-        <input type="password" className="input" placeholder="Password" />
+        <input
+          name="password"
+          type="password"
+          className="input"
+          placeholder="Password"
+        />
 
         <div>
           <a className="link link-hover">Forgot password?</a>
         </div>
 
-        <button className="btn btn-primary mt-2">Login</button>
+        <button type="submit" className="btn btn-primary mt-2">
+          Login
+        </button>
         <p className="text-center text-sm">or</p>
         <button className="btn border border-primary mt-2">
           {" "}
@@ -44,7 +80,7 @@ const LoginForm = () => {
             Terms of Services
           </a>
         </div>
-      </fieldset>
+      </form>
     </div>
   );
 };

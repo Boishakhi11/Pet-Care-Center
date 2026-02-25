@@ -1,8 +1,22 @@
-import React from "react";
+import React, { use } from "react";
 import logo from "../assets/logo-Image.png";
 import { Link } from "react-router";
+import { AuthContext } from "../provider/AuthProvider";
+import toast from "react-hot-toast";
+import userIcon from "../assets/user.png";
 
 const Navbar = () => {
+  const { user, logOutUser } = use(AuthContext);
+
+  const handleSignOut = () => {
+    logOutUser()
+      .then(() => {
+        toast("Log-out sccessfully");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
   return (
     <div className="navbar w-11/12 mx-auto">
       <div className="navbar-start">
@@ -88,10 +102,34 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      <div className="navbar-end">
-        <Link to="/auth/login" className="btn btn-primary text-[22px]">
-          Login
-        </Link>
+      <div className="navbar-end flex gap-3">
+        <div>
+          {" "}
+          {user && (
+            <img
+              className="w-10 h-10 rounded-full cursor-pointer"
+              src={user.photoURL || userIcon}
+              alt="User Image"
+              title={user?.email}
+            />
+          )}
+        </div>
+
+        <div>
+          {" "}
+          {user ? (
+            <button
+              onClick={handleSignOut}
+              className="btn btn-primary text-[22px]"
+            >
+              LogOut
+            </button>
+          ) : (
+            <Link to="/auth/login" className="btn btn-primary text-[22px]">
+              Login
+            </Link>
+          )}
+        </div>
       </div>
     </div>
   );

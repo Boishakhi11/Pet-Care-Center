@@ -4,7 +4,7 @@ import { GrFormRefresh } from "react-icons/gr";
 
 const BookAppointmnet = () => {
   const today = new Date().toISOString().split("T")[0];
-  console.log(today);
+  //console.log(today);
   const handleBooking = (e) => {
     e.preventDefault();
 
@@ -14,11 +14,11 @@ const BookAppointmnet = () => {
     form.reset();
   };
   return (
-    <div>
-      <h1>
+    <div className="mt-20">
+      <h1 className="text-4xl md:text-5xl font-semibold text-center">
         Plan a <span className="text-primary">Visit </span> with Us
       </h1>
-      <p>Please Book an Appointment</p>
+      <p className="text-center mb-5">Please Book an Appointment</p>
 
       {/*form*/}
       <div className="flex items-center justify-center bg-base-100 mt-10">
@@ -76,7 +76,6 @@ const BookAppointmnet = () => {
             Book Now
           </button>
         </form>
-        <Toaster position="top-right" />
       </div>
     </div>
   );

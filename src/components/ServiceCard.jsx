@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const ServiceCard = ({ servicedata }) => {
   return (
@@ -7,7 +8,7 @@ const ServiceCard = ({ servicedata }) => {
         <div className="bg-base-100 border border-base-300 shadow-xl rounded-lg overflow-hidden m-4 hover:shadow-xl transition-shadow duration-300 hover:scale-105">
           <img
             src={service.image}
-            alt={servicedata.serviceName}
+            alt={service.serviceName}
             className="w-full h-52 object-cover"
           />
           <div className="p-4 flex flex-col justify-center items-center">
@@ -23,9 +24,12 @@ const ServiceCard = ({ servicedata }) => {
                 <span className="font-medium">Price:</span> {service.price} nok
               </p>
             </div>
-            <button className="text-[18px] btn btn-primary text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors">
+            <Link
+              to={`/services/${service.serviceId}`}
+              className="text-[18px] btn btn-primary text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
+            >
               View Details
-            </button>
+            </Link>
           </div>
         </div>
       ))}

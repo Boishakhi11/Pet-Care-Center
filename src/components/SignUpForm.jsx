@@ -1,25 +1,70 @@
 import React from "react";
+import { use } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { LuDot } from "react-icons/lu";
 import { Link } from "react-router";
+import { AuthContext } from "../provider/AuthProvider";
+import toast from "react-hot-toast";
 
 const SignUpForm = () => {
+  const { createUser, setUser } = use(AuthContext);
+
+  const handleSignUp = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value;
+    const userImg = form.photo.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log(name, userImg, password, email);
+
+    createUser(email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        setUser(user);
+        toast("A User Account Created Succesfully");
+        form.reset();
+      })
+      .catch((error) => {
+        toast.error("error.message");
+      });
+  };
   return (
     <div className="flex items-center justify-center bg-base-100 mt-10">
-      <fieldset className="fieldset bg-base-200 border-base-300 shadow-2xl rounded-box w-xs border p-6 space-y-1">
+      <form
+        onSubmit={handleSignUp}
+        className="fieldset bg-base-200 border-base-300 shadow-2xl rounded-box w-xs border p-6 space-y-1"
+      >
         <label className="label">Name</label>
-        <input type="text" className="input" placeholder="Name" />
+        <input name="name" type="text" className="input" placeholder="Name" />
 
         <label className="label">Photo</label>
-        <input type="" className="input" placeholder="Photo URL" />
+        <input
+          name="photo"
+          type="url"
+          className="input"
+          placeholder="Photo URL"
+        />
 
         <label className="label">Email</label>
-        <input type="url" className="input" placeholder="Email" />
+        <input
+          name="email"
+          type="email"
+          className="input"
+          placeholder="Email"
+        />
 
         <label className="label">Password</label>
-        <input type="password" className="input" placeholder="Password" />
+        <input
+          name="password"
+          type="password"
+          className="input"
+          placeholder="Password"
+        />
 
-        <button className="btn btn-primary mt-2">Sign Up</button>
+        <button type="submit" className="btn btn-primary mt-2">
+          Sign Up
+        </button>
         <p className="text-center text-sm">or</p>
         <button className="btn border border-primary mt-2">
           {" "}
@@ -49,7 +94,7 @@ const SignUpForm = () => {
             </div>
           </div>
         </div>
-      </fieldset>
+      </form>
     </div>
   );
 };
