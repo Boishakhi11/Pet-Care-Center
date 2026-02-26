@@ -4,6 +4,7 @@ import { IoMdLogIn } from "react-icons/io";
 import LoginForm from "../components/LoginForm";
 
 const Login = () => {
+  
   return (
     <div className="bg-base-100">
       <div className="grid grid-cols-3 space-y-4 w-11/12 mx-auto ">

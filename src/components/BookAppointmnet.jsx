@@ -14,11 +14,11 @@ const BookAppointmnet = () => {
     form.reset();
   };
   return (
-    <div className="mt-20">
+    <div className="mt-20 mb-15 space-y-5">
       <h1 className="text-4xl md:text-5xl font-semibold text-center">
         Plan a <span className="text-primary">Visit </span> with Us
       </h1>
-      <p className="text-center mb-5">Please Book an Appointment</p>
+      <p className="text-center text-xl mb-5">Please Book an Appointment</p>
 
       {/*form*/}
       <div className="flex items-center justify-center bg-base-100 mt-10">
@@ -72,7 +72,7 @@ const BookAppointmnet = () => {
             className="input"
           />
 
-          <button type="submit" className="btn btn-primary mt-2">
+          <button type="submit" className="btn btn-primary text-xl mt-2">
             Book Now
           </button>
         </form>

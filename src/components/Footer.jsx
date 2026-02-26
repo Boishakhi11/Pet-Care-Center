@@ -4,7 +4,7 @@ import logo from "../assets/logo-Image.png";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="mt-10">
       <footer className="footer sm:footer-horizontal bg-neutral text-neutral-content py-10 flex justify-around items-center">
         <aside>
           <img className="w-7" src={logo}></img>

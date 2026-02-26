@@ -1,12 +1,14 @@
 import React, { use } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { LuDot } from "react-icons/lu";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const LoginForm = () => {
   const { loginUser } = use(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -18,6 +20,7 @@ const LoginForm = () => {
         // Signed in
         const user = userCredential.user;
         toast("Login Succesfully");
+        navigate(`${location.state ? location.state : "/"}`);
         form.reset();
       })
       .catch((error) => {

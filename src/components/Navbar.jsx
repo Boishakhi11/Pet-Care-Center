@@ -77,7 +77,7 @@ const Navbar = () => {
         <img className="w-8" src={logo}></img>
         <Link
           to="/"
-          className="text-2xl font-semibold text-accent-content italic"
+          className="text-xl font-semibold text-accent-content italic"
         >
           WarmPaws
         </Link>
@@ -120,7 +120,7 @@ const Navbar = () => {
           {user ? (
             <button
               onClick={handleSignOut}
-              className="btn btn-primary text-[22px]"
+              className="btn btn-primary lg:text-[22px]"
             >
               LogOut
             </button>

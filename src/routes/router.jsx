@@ -8,6 +8,7 @@ import MyProfile from "../pages/MyProfile";
 import Error from "../components/Error";
 import Loading from "../components/Loading";
 import ServiceDetails from "../components/ServiceDetails";
+import PrivateRoute from "../provider/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -44,7 +45,11 @@ const router = createBrowserRouter([
   {
     id: "services",
     path: "/services",
-    Component: Services,
+    element: (
+      <PrivateRoute>
+        <Services></Services>
+      </PrivateRoute>
+    ),
     loader: () => fetch("/serviceCategories.json"),
     hydrateFallbackElement: <Loading></Loading>,
     children: [
