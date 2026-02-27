@@ -4,11 +4,11 @@ import Services from "../layouts/ServicesLayout";
 import AuthLayout from "../layouts/AuthLayout";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
-import MyProfile from "../pages/MyProfile";
 import Error from "../components/Error";
 import Loading from "../components/Loading";
 import ServiceDetails from "../components/ServiceDetails";
 import PrivateRoute from "../provider/PrivateRoute";
+import MyProfileLayout from "../layouts/MyProfileLayout";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +27,14 @@ const router = createBrowserRouter([
     },
 
     hydrateFallbackElement: <Loading></Loading>,
+  },
+  {
+    path: "/profile",
+    element: (
+      <PrivateRoute>
+        <MyProfileLayout></MyProfileLayout>
+      </PrivateRoute>
+    ),
   },
   {
     path: "/auth",
@@ -60,10 +68,6 @@ const router = createBrowserRouter([
     ],
   },
 
-  {
-    path: "/profile",
-    Component: MyProfile,
-  },
   {
     path: "/*",
     Component: Error,

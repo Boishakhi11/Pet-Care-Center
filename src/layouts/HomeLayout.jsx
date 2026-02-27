@@ -2,13 +2,15 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Experts from "../components/Experts";
-import { useLoaderData } from "react-router";
+import { useLoaderData, useNavigation } from "react-router";
 import Testimonials from "../components/Testimonials";
 import ServiceDemo from "../components/ServiceDemo";
 import WinterTips from "../components/WinterTips";
+import Loading from "../components/Loading";
 
 const HomeLayout = () => {
   const data = useLoaderData();
+  const { state } = useNavigation();
 
   //console.log(data);
   return (
@@ -18,10 +20,14 @@ const HomeLayout = () => {
       </header>
       <main className="w-11/12 mx-auto">
         <section>
-          <ServiceDemo
-            key={data.services.serviceId}
-            data={data.services}
-          ></ServiceDemo>
+          {state == "loading" ? (
+            <Loading> </Loading>
+          ) : (
+            <ServiceDemo
+              key={data.services.serviceId}
+              data={data.services}
+            ></ServiceDemo>
+          )}
         </section>
         <section>
           <Experts data={data.vets}></Experts>

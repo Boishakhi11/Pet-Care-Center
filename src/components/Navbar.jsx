@@ -53,7 +53,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link to="profile" className="text-xl cursor-pointer">
+              <Link to="/profile" className="text-xl cursor-pointer">
                 My Profile
               </Link>
             </li>
@@ -96,7 +96,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to="profile" className="text-xl cursor-pointer">
+            <Link to="/profile" className="text-xl cursor-pointer">
               My Profile
             </Link>
           </li>
