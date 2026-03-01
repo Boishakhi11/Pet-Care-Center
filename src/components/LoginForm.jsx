@@ -2,11 +2,11 @@ import React, { use } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { LuDot } from "react-icons/lu";
 import { Link, useLocation, useNavigate } from "react-router";
-import { AuthContext } from "../provider/AuthProvider";
-import toast from "react-hot-toast";
+import { AuthContext, googleProvider } from "../provider/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 
 const LoginForm = () => {
-  const { loginUser } = use(AuthContext);
+  const { loginUser, googleLogin } = use(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -26,6 +26,22 @@ const LoginForm = () => {
       .catch((error) => {
         const errorMessage = error.message;
         toast("Something went wrong:", errorMessage);
+      });
+  };
+
+  const handleGoogleSignIn = () => {
+    googleLogin(googleProvider)
+      .then((result) => {
+        toast("Suceesfully logged In");
+        navigate(`${location.state ? location.state : "/"}`);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // The email of the user's account used.
+        const email = error.customData.email;
+        // The AuthCredential type that was used.
+        const credential = GoogleAuthProvider.credentialFromError(error);
       });
   };
   return (
@@ -58,7 +74,11 @@ const LoginForm = () => {
           Login
         </button>
         <p className="text-center text-sm">or</p>
-        <button className="btn border border-primary mt-2">
+        <button
+          type="button"
+          onClick={handleGoogleSignIn}
+          className="btn border border-primary mt-2"
+        >
           {" "}
           <FcGoogle className="text-xl" />
           Login with Google

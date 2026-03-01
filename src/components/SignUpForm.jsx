@@ -65,12 +65,13 @@ const SignUpForm = () => {
         <button type="submit" className="btn btn-primary mt-2">
           Sign Up
         </button>
-        <p className="text-center text-sm">or</p>
+        {/* <p className="text-center text-sm">or</p>
         <button className="btn border border-primary mt-2">
           {" "}
           <FcGoogle className="text-xl" />
-          Login with Google
+          SignUp with Google
         </button>
+        */}
 
         <div>
           <p className="text-[16px] text-center">
