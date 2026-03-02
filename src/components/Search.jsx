@@ -1,6 +1,6 @@
 import React from "react";
 
-const Search = () => {
+const Search = ({ selectedCategory, SetSelectedCategory }) => {
   return (
     <div data-aos="zoom-in" className="mt-10 space-y-4 mb-10">
       <h1 className="text-3xl md:text-5xl font-semibold text-center mb-4">
@@ -16,7 +16,12 @@ const Search = () => {
         <h1>Search by category: </h1>
         <div>
           <label className="select">
-            <select>
+            <select
+              className="select select-bordered"
+              value={selectedCategory}
+              onChange={(e) => SetSelectedCategory(e.target.value)}
+            >
+              <option>All</option>
               <option>Grooming</option>
               <option>Clothing</option>
               <option>Training</option>

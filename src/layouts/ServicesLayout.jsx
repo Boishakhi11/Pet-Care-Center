@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "../components/Navbar";
@@ -13,6 +13,9 @@ const ServicesLayout = () => {
   const servicedata = useLoaderData();
   const { id } = useParams();
 
+  const [selectedCategory, SetSelectedCategory] = useState("All");
+
+  //animation on scroll
   useEffect(() => {
     AOS.init({
       duration: 2000,
@@ -20,21 +23,29 @@ const ServicesLayout = () => {
     });
   }, []);
 
+  //search by category
+  const filterdServices =
+    selectedCategory === "All"
+      ? servicedata
+      : servicedata.filter((service) => service.category == selectedCategory);
+
   return (
     <div className="bg-base-100 min-h-screen flex flex-col">
       <header className="bg-base-300">
         <Navbar></Navbar>
       </header>
       <main className="grow w-11/12 mx-auto bg-base-200">
-        <section>{!id && <Search></Search>}</section>
-
         <section>
           {!id && (
-            <ServiceCard
-              key={servicedata.id}
-              servicedata={servicedata}
-            ></ServiceCard>
+            <Search
+              selectedCategory={selectedCategory}
+              SetSelectedCategory={SetSelectedCategory}
+            ></Search>
           )}
+        </section>
+
+        <section>
+          {!id && <ServiceCard servicedata={filterdServices}></ServiceCard>}
         </section>
 
         <section>
