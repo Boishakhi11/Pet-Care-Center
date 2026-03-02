@@ -4,9 +4,12 @@ import { LuDot } from "react-icons/lu";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext, googleProvider } from "../provider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
+import { useState } from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const LoginForm = () => {
   const { loginUser, googleLogin } = use(AuthContext);
+  const [showPassword, SetShowPassword] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -59,15 +62,26 @@ const LoginForm = () => {
         />
 
         <label className="label">Password</label>
-        <input
-          name="password"
-          type="password"
-          className="input"
-          placeholder="Password"
-        />
+        <div className="relative">
+          <input
+            name="password"
+            type={showPassword ? "text" : "password"}
+            className="input"
+            placeholder="Password"
+          />
+
+          <span
+            onClick={() => SetShowPassword(!showPassword)}
+            className="absolute top-3 right-3"
+          >
+            {showPassword ? <FaEyeSlash /> : <FaEye />}
+          </span>
+        </div>
 
         <div>
-          <a className="link link-hover">Forgot password?</a>
+          <Link to="/auth/forget-password" className="link link-hover">
+            Forgot password?
+          </Link>
         </div>
 
         <button type="submit" className="btn btn-primary mt-2">

@@ -5,10 +5,13 @@ import { LuDot } from "react-icons/lu";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useState } from "react";
 
 const SignUpForm = () => {
   const { createUser, setUser, updateUser } = use(AuthContext);
   const naviagte = useNavigate();
+  const [showPassword, SetShowPassword] = useState(false);
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -68,12 +71,20 @@ const SignUpForm = () => {
         />
 
         <label className="label">Password</label>
-        <input
-          name="password"
-          type="password"
-          className="input"
-          placeholder="Password"
-        />
+        <div className="relative">
+          <input
+            name="password"
+            type={showPassword ? "text" : "password"}
+            className="input"
+            placeholder="Password"
+          />
+          <span
+            onClick={() => SetShowPassword(!showPassword)}
+            className="absolute cursor-pointer right-4 top-3"
+          >
+            {showPassword ? <FaEyeSlash> </FaEyeSlash> : <FaEye />}
+          </span>
+        </div>
 
         <button type="submit" className="btn btn-primary mt-2">
           Sign Up

@@ -9,6 +9,7 @@ import Loading from "../components/Loading";
 import ServiceDetails from "../components/ServiceDetails";
 import PrivateRoute from "../provider/PrivateRoute";
 import MyProfileLayout from "../layouts/MyProfileLayout";
+import ForgetPassword from "../components/ForgetPassword";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
       {
         path: "/auth/sigup",
         Component: Register,
+      },
+      {
+        path: "/auth/forget-password",
+        Component: ForgetPassword,
       },
     ],
   },
