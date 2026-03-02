@@ -7,7 +7,7 @@ const ServiceDetails = () => {
   const services = useRouteLoaderData("services");
 
   const [service, setService] = useState({});
-  console.log(id, service);
+  //console.log(id, service);
 
   useEffect(() => {
     const serviceDetails = services.find(
@@ -49,7 +49,7 @@ const ServiceDetails = () => {
             className="btn btn-primary text-xl mt-2"
           >
             {" "}
-            Browse All Services{" "}
+            Go Back{" "}
           </Link>
         </div>
       </div>

@@ -20,7 +20,7 @@ const SignUpForm = () => {
     const userImg = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-    console.log(name, userImg, password, email);
+    //console.log(name, userImg, password, email);
 
     createUser(email, password)
       .then((userCredential) => {
@@ -34,7 +34,6 @@ const SignUpForm = () => {
             naviagte("/");
           })
           .catch((error) => {
-            console.log(error);
             setUser(user);
           });
 
