@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import MyProfile from "../pages/MyProfile";
 
 const MyProfileLayout = () => {
   return (
@@ -8,7 +9,9 @@ const MyProfileLayout = () => {
       <header className="bg-base-300">
         <Navbar></Navbar>
       </header>
-      <main className="grow"></main>
+      <main className="grow">
+        <MyProfile></MyProfile>
+      </main>
       <footer>
         <Footer></Footer>
       </footer>

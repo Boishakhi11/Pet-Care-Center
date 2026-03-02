@@ -108,7 +108,7 @@ const Navbar = () => {
           {user && (
             <img
               className="w-10 h-10 rounded-full cursor-pointer"
-              src={user.photoURL || userIcon}
+              src={`${user ? user.photoURL : userIcon}`}
               alt="User Image"
               title={user?.email}
             />

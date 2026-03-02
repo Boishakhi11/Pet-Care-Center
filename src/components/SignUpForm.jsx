@@ -2,12 +2,13 @@ import React from "react";
 import { use } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { LuDot } from "react-icons/lu";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import toast from "react-hot-toast";
 
 const SignUpForm = () => {
-  const { createUser, setUser } = use(AuthContext);
+  const { createUser, setUser, updateUser } = use(AuthContext);
+  const naviagte = useNavigate();
 
   const handleSignUp = (e) => {
     e.preventDefault();
@@ -21,7 +22,19 @@ const SignUpForm = () => {
     createUser(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        setUser(user);
+        updateUser({
+          displayName: name,
+          photoURL: userImg,
+        })
+          .then(() => {
+            setUser({ ...user, displayName: name, photoURL: userImg });
+            naviagte("/");
+          })
+          .catch((error) => {
+            console.log(error);
+            setUser(user);
+          });
+
         toast("A User Account Created Succesfully");
         form.reset();
       })
