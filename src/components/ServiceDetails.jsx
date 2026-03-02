@@ -43,7 +43,11 @@ const ServiceDetails = () => {
             {service.serviceName}
           </h1>
           <p className="text-xl">{service.description}</p>
-          <Link to="/services" className="btn btn-primary text-xl mt-2">
+          <Link
+            to="/services"
+            onClick={() => window.scrollTo(0, 0)}
+            className="btn btn-primary text-xl mt-2"
+          >
             {" "}
             Browse All Services{" "}
           </Link>

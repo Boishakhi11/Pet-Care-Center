@@ -36,6 +36,7 @@ const ServiceDemo = ({ data }) => {
               </div>
               <Link
                 to={`/services/${service.serviceId}`}
+                onClick={() => window.scrollTo(0, 0)}
                 className="btn btn-sm btn-primary text-[19px] w-full rounded-full"
               >
                 View Details

@@ -14,7 +14,7 @@ const BookAppointmnet = () => {
     form.reset();
   };
   return (
-    <div className="mt-20 mb-15 space-y-5">
+    <div data-aos="fade-up" className="mt-20 mb-15 space-y-5">
       <h1 className="text-4xl md:text-5xl font-semibold text-center">
         Plan a <span className="text-primary">Visit </span> with Us
       </h1>

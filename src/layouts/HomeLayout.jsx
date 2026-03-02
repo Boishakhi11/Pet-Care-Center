@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Experts from "../components/Experts";
@@ -12,6 +14,13 @@ const HomeLayout = () => {
   const data = useLoaderData();
   const { state } = useNavigation();
 
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+      once: true,
+    });
+  }, []);
+
   //console.log(data);
   return (
     <div className="bg-base-200">
@@ -19,7 +28,7 @@ const HomeLayout = () => {
         <Header></Header>
       </header>
       <main className="w-11/12 mx-auto">
-        <section>
+        <section data-aos="fade-up">
           {state == "loading" ? (
             <Loading> </Loading>
           ) : (
@@ -32,7 +41,7 @@ const HomeLayout = () => {
         <section>
           <Experts data={data.vets}></Experts>
         </section>
-        <section>
+        <section data-aos="fade-up">
           <WinterTips data={data.tips}></WinterTips>
         </section>
         <section>

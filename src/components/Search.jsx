@@ -2,7 +2,7 @@ import React from "react";
 
 const Search = () => {
   return (
-    <div className="mt-10 space-y-4 mb-10">
+    <div data-aos="zoom-in" className="mt-10 space-y-4 mb-10">
       <h1 className="text-3xl md:text-5xl font-semibold text-center mb-4">
         Explore Winter Care Services
       </h1>

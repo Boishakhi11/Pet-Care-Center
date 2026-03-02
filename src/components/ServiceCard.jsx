@@ -3,7 +3,10 @@ import { Link } from "react-router";
 
 const ServiceCard = ({ servicedata }) => {
   return (
-    <div className=" bg-base-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 w-11/12 mx-auto">
+    <div
+      data-aos="fade-right"
+      className=" bg-base-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 w-11/12 mx-auto"
+    >
       {servicedata.map((service) => (
         <div className="bg-base-100 border border-base-300 shadow-xl rounded-lg overflow-hidden m-4 hover:shadow-xl transition-shadow duration-300 hover:scale-105">
           <img
@@ -26,6 +29,7 @@ const ServiceCard = ({ servicedata }) => {
             </div>
             <Link
               to={`/services/${service.serviceId}`}
+              onClick={() => window.scrollTo(0, 0)}
               className="text-[18px] btn btn-primary text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
             >
               View Details
