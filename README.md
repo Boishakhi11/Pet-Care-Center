@@ -2,12 +2,12 @@
 
 Project Name
 Pet Care Center – A Winter Care Services Platform for Pets
-
 Purpose
 This project provides a user-friendly platform for pet owners to explore and book winter care services for their pets. It allows users to view available services, check ratings and prices, book appointments, and read reviews from other customers. The system also includes interactive frontend experience for better engagement.
-
 Live URL
 (https://pet-care-center-in-norway.netlify.app/)
+
+![Alt Text](./Screenshot%202026-03-02%20at%2023.28.55.png)
 
 Key Features
 Home Page 2. Hero carousel with seasonal pet care promotions 3. Display of popular winter care services with “View Details” 4. Customer testimonials with animations 5. Expert veterinary team showcase
