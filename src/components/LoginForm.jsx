@@ -10,6 +10,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 const LoginForm = () => {
   const { loginUser, googleLogin } = use(AuthContext);
   const [showPassword, SetShowPassword] = useState(false);
+  const [email, setEmail] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -57,6 +58,8 @@ const LoginForm = () => {
         <input
           name="email"
           type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           className="input"
           placeholder="Email"
         />
@@ -79,7 +82,12 @@ const LoginForm = () => {
         </div>
 
         <div>
-          <Link to="/auth/forget-password" className="link link-hover">
+          <Link
+            onClick={() => {
+              navigate("/auth/forget-password", { state: { email } });
+            }}
+            className="link link-hover"
+          >
             Forgot password?
           </Link>
         </div>
